@@ -6,8 +6,14 @@ class Mycomponent extends React.Component{
         address: `Ha Noi`,
         age: 24
     };
-handleClick(event){
+handleClick = (event) => {
     console.log(`Click this button`)
+    console.log( `my name is: `,this.state.name)
+
+    this.setState({
+        name:`thuy`,
+        address: `Nam Dinh`
+    })
 }
 handleOnMoverOver(event){
 console.log(event.pageX)
@@ -17,7 +23,7 @@ console.log(event.pageX)
         return(
             <div>
                 My name is {this.state.name} and I'm from {this.state.address}
-                <button onClick ={this.handleClick}>Click Me</button>
+                <button onClick ={(event)=>{this.handleClick(event)}}>Click Me</button>
                 <button onMouseOver ={this.handleOnMoverOver}>Hit Me</button>
             </div>
         );
