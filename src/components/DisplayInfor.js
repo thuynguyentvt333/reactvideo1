@@ -1,6 +1,16 @@
 import React from "react";
 
 class DisplayInfor extends React.Component{
+state ={
+    isShowListUser: true
+}
+
+    handleShowHide=()=>{
+        this.setState({
+            isShowListUser: !this.state.isShowListUser
+
+        })
+    }
     render(){
         // console.log(this.props);
         //destrucfturing array/object
@@ -11,15 +21,46 @@ class DisplayInfor extends React.Component{
 
         //props => properties: tài sản / dùng để truyền dữ liệu cha sang con
         return(
+           <div>
+                            <div>
+                            <span onClick={() => {this.handleShowHide()}}>
+                            {this.state.isShowListUser ===true ? "Hide list user" : "Show list user"}
+                            </span>
+                            </div>
+                           
+{this.state.isShowListUser &&
             <div>
-                  {listUser.map((user)=>{
-return(
-    <div key={user.id}>
-        <div>My name is {user.name}</div>
-        <div>My age is {user.age}</div>
-    </div>
-)
+                  {listUser.map((user,index)=>{
+                    console.log(`check: `,user);
+
+                    return(
+                        
+                        <div key={user.id} className={+user.age>18 ? "green" : "red"}>
+                            <div>My name is {user.name}</div>
+                            <div>My age is {user.age}</div>
+                            <hr/>
+                        </div>
+                    )
+                    // if(+user.age >18){
+                    //     return(
+                    //         <div key={user.id} className="green">
+                    //             <div>My name is {user.name}</div>
+                    //             <div>My age is {user.age}</div>
+                    //             <hr/>
+                    //         </div>
+                    //     ) 
+                    // }else{
+                    //     return(
+                    //         <div key={user.id} className ="red">
+                    //             <div>My name is {user.name}</div>
+                    //             <div>My age is {user.age}</div>
+                    //             <hr/>
+                    //         </div>
+                    //     )
+                    // }
+
 })}
+            </div>}
             </div>
             // <div>
             // <div>My name is {this.props.name}</div>
