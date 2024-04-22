@@ -1,13 +1,18 @@
 import React from "react";
 import App from "../App";
-import Userinfor from "./Userinfor";
+import UserInfor from "./UserInfor";
+import DisplayInfor from "./DisplayInfor";
 class Mycomponent extends React.Component{
     
     //JSX
     render(){
         return(
             <div>
-               <Userinfor></Userinfor>
+               <UserInfor></UserInfor>
+               <br></br>
+               <DisplayInfor name ="Thuy" age="23"></DisplayInfor>
+               <hr/>
+               <DisplayInfor name ="Thuy" age="23"></DisplayInfor>
             </div>
         );
     }

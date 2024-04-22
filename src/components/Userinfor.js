@@ -1,6 +1,6 @@
 import React from "react";
 
-class Userinfor extends React.Component{
+class UserInfor extends React.Component{
     state = {
         name: `nguyenthuy`,
         address: `Ha Noi`,
@@ -49,4 +49,4 @@ onChange={(event)=>this.handleOnChangeAge(event)}/>
     )
 }
 }
-export default Userinfor;
+export default UserInfor;
