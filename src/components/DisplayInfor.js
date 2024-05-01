@@ -41,31 +41,11 @@ state ={
                             <hr/>
                         </div>
                     )
-                    // if(+user.age >18){
-                    //     return(
-                    //         <div key={user.id} className="green">
-                    //             <div>My name is {user.name}</div>
-                    //             <div>My age is {user.age}</div>
-                    //             <hr/>
-                    //         </div>
-                    //     ) 
-                    // }else{
-                    //     return(
-                    //         <div key={user.id} className ="red">
-                    //             <div>My name is {user.name}</div>
-                    //             <div>My age is {user.age}</div>
-                    //             <hr/>
-                    //         </div>
-                    //     )
-                    // }
-
+                
 })}
             </div>}
             </div>
-            // <div>
-            // <div>My name is {this.props.name}</div>
-            // <div>My age is {this.props.age}</div>
-            // </div>
+            
         )
     }
 }

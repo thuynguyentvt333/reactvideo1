@@ -1,6 +1,6 @@
 import React from "react";
 import App from "../App";
-import UserInfor from "./UserInfor";
+import AddUserInfor from "./AddUserInfor";
 import DisplayInfor from "./DisplayInfor";
 class Mycomponent extends React.Component{
     state={
@@ -10,14 +10,25 @@ class Mycomponent extends React.Component{
             {id:3, name:`thuy`,age:`93`}
         ]
     }
+
+    handleAddNewUser = (UserOj) => {
+    //    console.log(`check data from parent `,UserOj)
+    //    this.setState({
+    //     listUser: [UserOj,...this.state.listUser]
+    //    })
+    
+    }
     //JSX
+
     render(){
         return(
             <div>
-               <UserInfor></UserInfor>
+               <AddUserInfor handleAddNewUser = {this.handleAddNewUser}> </AddUserInfor>
+
                <br></br>
 
                <DisplayInfor listUser={this.state.listUser}></DisplayInfor>
+
             </div>
         );
     }
