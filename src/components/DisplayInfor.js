@@ -31,7 +31,7 @@ state ={
                             </div>
                            
 {this.state.isShowListUser &&
-            <div>
+            <>
                   {listUser.map((user,index)=>{
                     console.log(`check: `,user);
 
@@ -45,7 +45,7 @@ state ={
                     )
                 
 })}
-            </div>}
+            </>}
             </div>
             
         )

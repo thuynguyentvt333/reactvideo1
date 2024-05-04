@@ -12,24 +12,26 @@ class Mycomponent extends React.Component{
     }
 
     handleAddNewUser = (UserOj) => {
-    //    console.log(`check data from parent `,UserOj)
-    //    this.setState({
-    //     listUser: [UserOj,...this.state.listUser]
-    //    })
-    
-    }
-    //JSX
+       console.log(`check data from parent `,UserOj)
+       this.setState({
+        listUser: [UserOj,...this.state.listUser]
+       })
 
+    }
+
+    //JSX
     render(){
         return(
-            <div>
+            <>
+            <div className='a'>
                <AddUserInfor handleAddNewUser = {this.handleAddNewUser}> </AddUserInfor>
 
                <br></br>
 
                <DisplayInfor listUser={this.state.listUser}></DisplayInfor>
-
-            </div>
+               </div>
+            <div className='b'></div>
+            </>
         );
     }
 }
