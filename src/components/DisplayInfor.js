@@ -1,5 +1,5 @@
 import React from "react";
-
+import './DisplayIfor.scss';
 class DisplayInfor extends React.Component{
 state ={
     isShowListUser: true
@@ -21,7 +21,7 @@ state ={
 
         //props => properties: tài sản / dùng để truyền dữ liệu cha sang con
         return(
-           <div>
+           <div className='display-infor-container'>
                             <div>
                             <span onClick={() => {this.handleShowHide()}}>
                             {this.state.isShowListUser ===true ? "Hide list user" : "Show list user"}
