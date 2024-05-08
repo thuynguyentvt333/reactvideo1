@@ -34,7 +34,7 @@ handleOnSubmit=(event)=>{
 render(){
     return(
         <div>
- My name is {this.state.name} and I'm from {this.state.address}
+ My name is {this.state.name} and I'm {this.state.age}
 <form onSubmit= {(event) => this.handleOnSubmit(event)}>
     <label>Your name: </label>
 <input 
