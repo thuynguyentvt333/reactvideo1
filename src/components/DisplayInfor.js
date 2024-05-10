@@ -7,6 +7,8 @@ const DisplayInfor=(props)=>{
     const{listUser}=props;
        
    const[isShowHideListUser, setShowHideListUser]= useState(true);
+   //destrucfturing array/object
+
 const handleShowHideListUser=()=>{
 setShowHideListUser(!isShowHideListUser);
 }
