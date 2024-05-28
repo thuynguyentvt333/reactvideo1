@@ -17,7 +17,7 @@ const App =() =>{
  {/* Note */}
  <Outlet></Outlet> 
 
-  <div> 
+  {/* <div> 
     <button>
       <Link to ="/users">
       Goto Userpage
@@ -27,7 +27,7 @@ const App =() =>{
     <Link to ="/admins">
     Goto Adminpage
       </Link></button>
-  </div>
+  </div> */}
     </div>
 
   );
